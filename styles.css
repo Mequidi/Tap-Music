@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+:root{
+    --font-mon: 'Montserrat', sans-serif;
+    --color1:hsl(192, 73%, 60%);
+    --color2:hsl(282, 66%, 60%);
+    --color3:hsl(60, 100%, 60%);
+    --color4:hsl(102, 66%, 60%);
+    --color5:hsl(233, 64%, 69%);
+    --color6:hsl(0, 93%, 69%);
+}
+@font-face{
+    font-family:myFont;
+    src: url(/MARSNEVENEKSK.otf);
+}
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-mon);
+    /* background: linear-gradient(90deg,rgb(168, 168, 168),rgb(88, 88, 88,0.1)); */
+    background:#fff;
+    overflow:hidden;
+}
+
+section{
+    display: grid;
+    min-height: 100vh;
+    
+}
+header h2{
+    margin: 2rem 0 1rem 0;
+    text-transform: capitalize;
+    size: bold;
+    font-family:myFont;
+    font-size: 80px;
+    text-align: center;
+}
+header p{
+    text-transform: capitalize;
+    font-weight:lighter;
+    font-size: 25px;
+    text-align: center;
+}
+.audio-container{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: flex-end;
+}
+.audio-container div{
+    flex-grow:1;
+    height: 50%;
+    cursor: pointer;
+    border-top-left-radius: 0.3rem;
+}
+.div1{
+    background: var(--color1);
+}
+.div2{
+    background: var(--color2);
+}
+.div3{
+    background: var(--color3);
+}
+.div4{
+    background: var(--color4);
+}
+.div5{
+    background: var(--color5);
+}
+.div6{
+    background: var(--color6);
+}
+.visual >div{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    z-index: -1;
+}
+@keyframes jump{
+    0%{
+        top: 100%;
+    }
+    50%{
+        top: 40%;
+    }
+    100%{
+        top:100%;
+    }
+}
+.sound{
+    display: none;
+    visibility: none;
+}
